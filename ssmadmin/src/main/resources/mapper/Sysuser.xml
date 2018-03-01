@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--
+namespace 指定接口全路径名
+resultType 返回值类型
+-->
+<mapper namespace="com.jarvis.curd.dao.SysuserMapper">
+    <!--查询字段和实体类java bean字段不匹配的时候 可把查询语句加个别名和java bean字段一样即可-->
+    <select id="getSysuser" resultType="com.jarvis.curd.entity.Sysuser">
+        select * from sysuser where id=#{id};
+    </select>
+</mapper>
